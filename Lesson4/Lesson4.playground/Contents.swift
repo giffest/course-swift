@@ -36,40 +36,46 @@ alsoFrameRate.frameRate = 30.0
 tenEighty.frameRate
 //
 
-enum chessmanType {
-    case king
-    case queen
-    case castle
-    case khight
-}
-
-enum chessmanColor {
-    case white
-    case black
-}
-
 class Chessman {
+    
+    // перечисления для класса, для сокращения памяти внутри класса, т.е. если класс не вызван то перечисления не занимают память
+    enum chessmanType {
+        case king
+        case queen
+        case castle
+        case khight
+    }
+    
+    enum chessmanColor {
+        case white
+        case black
+    }
     
     let type: chessmanType
     let color: chessmanColor
     
     var coordinate: (String, Int)? = nil
     
+    // инициализатор с двумя свойствами
     init(type: chessmanType, color: chessmanColor) {
         self.color = color
         self.type = type
     }
     
+    // инициализатор с тремя свойствами
     init(type: chessmanType, color: chessmanColor, coordinate: (String, Int)) {
         self.type = type
         self.color = color
         self.setCoordinate(char: coordinate.0, num: coordinate.1)
     }
     
+    // метод класса
+    // если добавить final то это будет означать что нельзя переопределить метод в дочернем классе, final так же сокращает время выполнения операции
     func setCoordinate(char c: String, num n: Int) {
         self.coordinate = (c, n)
     }
     
+    // метод класса
     func kill() {
         self.coordinate = nil
     }
@@ -82,14 +88,16 @@ King.setCoordinate(char: "E", num: 5)
 
 var queen = Chessman(type: .queen, color: .white, coordinate: ("D", 8))
 
-//var link = Chessman.chessmanColor.black
-// посмотреть урок для исправления ошибки
+var link = Chessman.chessmanColor.black //пример для вызова типа из класса
 
+// Наследование (дочерний класс)
 class someSumClass: Chessman {
+    // метод нового класса
     func printChessmanType() {
         print(self.type)
     }
     
+    // override для переопредления метода(func) в основном классе
     override func setCoordinate(char c: String, num n: Int) {
         self.coordinate = (c, n*2)
         print(self.coordinate!)
@@ -103,8 +111,8 @@ knight.printChessmanType()
 
 knight.setCoordinate(char: "E", num: 5)
 //
-// Деиницилизация
 
+// Деиницилизация
 class superClass {
     init?(isNil: Bool) {
         if isNil == true {
@@ -121,16 +129,15 @@ class superClass {
 
 class subClass: superClass {
     deinit {
-        print("Подкласс деницилизирован")
+        print("Подкласс деиницилизирован")
     }
 }
 
-var object = superClass(isNil: false)
+var object = subClass(isNil: false)
 
 object = nil
 
-// Arc
-
+// Arc - пример работы:
 class Person {
     let name: String
     init(name: String) {

@@ -23,7 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		54FFE28D224D4EFA00EF61A1 /* Lessom4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lessom4; sourceTree = BUILT_PRODUCTS_DIR; };
+		54FFE28D224D4EFA00EF61A1 /* Lesson4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lesson4; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FFE290224D4EFA00EF61A1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +41,7 @@
 		54FFE284224D4EFA00EF61A1 = {
 			isa = PBXGroup;
 			children = (
-				54FFE28F224D4EFA00EF61A1 /* Lessom4 */,
+				54FFE28F224D4EFA00EF61A1 /* Lesson4 */,
 				54FFE28E224D4EFA00EF61A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,25 +49,25 @@
 		54FFE28E224D4EFA00EF61A1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				54FFE28D224D4EFA00EF61A1 /* Lessom4 */,
+				54FFE28D224D4EFA00EF61A1 /* Lesson4 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		54FFE28F224D4EFA00EF61A1 /* Lessom4 */ = {
+		54FFE28F224D4EFA00EF61A1 /* Lesson4 */ = {
 			isa = PBXGroup;
 			children = (
 				54FFE290224D4EFA00EF61A1 /* main.swift */,
 			);
-			path = Lessom4;
+			path = Lesson4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		54FFE28C224D4EFA00EF61A1 /* Lessom4 */ = {
+		54FFE28C224D4EFA00EF61A1 /* Lesson4 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54FFE294224D4EFA00EF61A1 /* Build configuration list for PBXNativeTarget "Lessom4" */;
+			buildConfigurationList = 54FFE294224D4EFA00EF61A1 /* Build configuration list for PBXNativeTarget "Lesson4" */;
 			buildPhases = (
 				54FFE289224D4EFA00EF61A1 /* Sources */,
 				54FFE28A224D4EFA00EF61A1 /* Frameworks */,
@@ -77,9 +77,9 @@
 			);
 			dependencies = (
 			);
-			name = Lessom4;
+			name = Lesson4;
 			productName = Lessom4;
-			productReference = 54FFE28D224D4EFA00EF61A1 /* Lessom4 */;
+			productReference = 54FFE28D224D4EFA00EF61A1 /* Lesson4 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -97,7 +97,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 54FFE288224D4EFA00EF61A1 /* Build configuration list for PBXProject "Lessom4" */;
+			buildConfigurationList = 54FFE288224D4EFA00EF61A1 /* Build configuration list for PBXProject "Lesson4" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,7 +109,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				54FFE28C224D4EFA00EF61A1 /* Lessom4 */,
+				54FFE28C224D4EFA00EF61A1 /* Lesson4 */,
 			);
 		};
 /* End PBXProject section */
@@ -262,7 +262,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		54FFE288224D4EFA00EF61A1 /* Build configuration list for PBXProject "Lessom4" */ = {
+		54FFE288224D4EFA00EF61A1 /* Build configuration list for PBXProject "Lesson4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54FFE292224D4EFA00EF61A1 /* Debug */,
@@ -271,7 +271,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54FFE294224D4EFA00EF61A1 /* Build configuration list for PBXNativeTarget "Lessom4" */ = {
+		54FFE294224D4EFA00EF61A1 /* Build configuration list for PBXNativeTarget "Lesson4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54FFE295224D4EFA00EF61A1 /* Debug */,

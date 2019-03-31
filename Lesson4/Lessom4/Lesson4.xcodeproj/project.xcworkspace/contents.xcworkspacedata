@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Lessom4.xcodeproj">
+      location = "self:/Users/stingray/Documents/Project/course-swift/Lesson4/Lessom4/Lesson4.xcodeproj">
    </FileRef>
 </Workspace>
