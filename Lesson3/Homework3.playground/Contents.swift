@@ -205,3 +205,103 @@ car5.engineState = .Stop
 truck5.windowState = .Close
 car5.discription()
 truck5.discription()
+
+// варианты решения из примеров
+import Foundation
+
+enum VehicleType: CustomStringConvertible {
+    case passengerCar, truck
+    
+    var description: String {
+        switch self {
+        case .passengerCar:
+            return "🚗"
+        case .truck:
+            return "🚛"
+        }
+    }
+}
+
+enum EngineStatus: CustomStringConvertible {
+    case on, off
+    
+    var description: String {
+        switch self {
+        case .on:
+            return "Двигатель заведён"
+        case .off:
+            return "Двигатель заглушен"
+        }
+    }
+}
+
+enum WindowsStatus: CustomStringConvertible {
+    case opened, closed
+    
+    var description: String {
+        switch self {
+        case .opened:
+            return "Окна открыты"
+        case .closed:
+            return "Окна закрыты"
+        }
+    }
+}
+
+enum Action {
+    case switchEngine(EngineStatus)
+    case switchWindows(WindowsStatus)
+    case loadCargo(Double)
+}
+
+struct Vehicle: CustomStringConvertible {
+    let type: VehicleType
+    let brand: String
+    let productionYear: Int
+    let maxCargoSpace: Double
+    var engine: EngineStatus = .off
+    var windows: WindowsStatus = .closed
+    var currentCargoSpace: Double = 0
+    
+    var description: String {
+        return "\(type) \(brand)\nГод выпуска: \(productionYear)\nСостояние: \(engine) | \(windows) | Загрузка \(currentCargoSpace)/\(maxCargoSpace)\n"
+    }
+    
+    init(type:VehicleType, brand: String, productionYear:Int, maxCargoSpace:Double) {
+        self.type = type
+        self.brand = brand
+        self.productionYear = productionYear
+        self.maxCargoSpace = maxCargoSpace
+    }
+    
+    mutating func perform(action: Action) {
+        switch action {
+        case .switchEngine(let status):
+            engine = status
+        case .switchWindows(let status):
+            windows = status
+        case .loadCargo(let load):
+            let expectedLoad = load + currentCargoSpace
+            switch expectedLoad {
+            case _ where expectedLoad > maxCargoSpace:
+                currentCargoSpace = maxCargoSpace
+            case _ where expectedLoad < 0:
+                currentCargoSpace = 0
+            default:
+                currentCargoSpace += load
+            }
+        }
+    }
+}
+
+var honda = Vehicle(type: .passengerCar, brand: "Honda Civic", productionYear: 2017, maxCargoSpace: 15.1)
+honda.perform(action: .loadCargo(7.6))
+honda.perform(action: .loadCargo(-3))
+honda.perform(action: .switchEngine(.on))
+print(honda)
+
+var manTruck = Vehicle(type: .truck, brand: "MAN LION PRO 640", productionYear: 2019, maxCargoSpace:3000)
+manTruck.perform(action: .switchWindows(.opened))
+manTruck.perform(action: .loadCargo(3001))
+print(manTruck)
+
