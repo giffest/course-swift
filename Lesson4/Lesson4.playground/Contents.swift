@@ -457,3 +457,4 @@ var passport: Passport? = Passport(man: man2!)
 passport = nil // объект еще не удален, его удерживает мужчина
 man = nil //теперь удалены оба объекта
 
+    
