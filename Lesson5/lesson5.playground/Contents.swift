@@ -281,21 +281,21 @@ extension Circle3 {             // используем ключевое сло�
 let circle6 = Circle3(radius: 12)
 circle6.diameter             // 24
 //
-/*
+
 extension String {
     func oddChars() -> String {
         var oddChars: [Character] = []
-        for char in self.characters.enumerated() {
+        for char in self.enumerated() {
             if char.offset % 2 == 0 {
                 oddChars.append(char.element)
             }
         }
         return String(oddChars)
     }
-//}
+}
 let newString = "qwertyy".oddChars()
 print(newString) // qety
-*/
+
 class Circle7 {
     var radius: Double!
 }
