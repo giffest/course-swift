@@ -29,5 +29,4 @@ class GameViewController: UIViewController {
         // добавляем сцену на экран
         skView.presentScene(scene)
     }
-
 }
