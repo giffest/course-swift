@@ -118,7 +118,13 @@ extension GameScene: SKPhysicsContactDelegate {
             
         case CollisionCategories.EdgeBody:
             //Домашнее задание
-            break
+            /*
+            1. Написать рестарт игры при соприкосновении со стеной.
+            */
+            snake?.removeFromParent()
+            snake = Snake(atPoint: CGPoint(x: view!.scene!.frame.midX, y: view!.scene!.frame.midY))
+            self.addChild(snake!)
+            
         default:
             break
         }
